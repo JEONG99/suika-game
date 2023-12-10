@@ -59,7 +59,7 @@ function App() {
         index,
         isSleeping: true,
         render: {
-          sprite: { texture: `/public/${fruit.name}.png` },
+          sprite: { texture: `/${fruit.name}.png` },
         },
         restitution: 0.2,
       });
@@ -128,7 +128,7 @@ function App() {
             {
               index: index + 1,
               render: {
-                sprite: { texture: `/public/${newFruit.name}.png` },
+                sprite: { texture: `/${newFruit.name}.png` },
               },
             }
           );
