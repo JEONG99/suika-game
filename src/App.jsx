@@ -3,6 +3,32 @@ import { Bodies, Engine, Render, Runner, World, Body, Events } from "matter-js";
 import { FRUITS_BASE } from "./fruits.js";
 import Swal from "sweetalert2";
 
+import cherry from "/base/00_cherry.png";
+import strawberry from "/base/01_strawberry.png";
+import grape from "/base/02_grape.png";
+import gyool from "/base/03_gyool.png";
+import orange from "/base/04_orange.png";
+import apple from "/base/05_apple.png";
+import pear from "/base/06_pear.png";
+import peach from "/base/07_peach.png";
+import pineapple from "/base/08_pineapple.png";
+import melon from "/base/09_melon.png";
+import watermelon from "/base/10_watermelon.png";
+
+const imageMap = {
+  "/base/00_cherry.png": cherry,
+  "/base/01_strawberry.png": strawberry,
+  "/base/02_grape.png": grape,
+  "/base/03_gyool.png": gyool,
+  "/base/04_orange.png": orange,
+  "/base/05_apple.png": apple,
+  "/base/06_pear.png": pear,
+  "/base/07_peach.png": peach,
+  "/base/08_pineapple.png": pineapple,
+  "/base/09_melon.png": melon,
+  "/base/10_watermelon.png": watermelon,
+};
+
 function App() {
   const canvasRef = useRef(null);
 
@@ -59,7 +85,7 @@ function App() {
         index,
         isSleeping: true,
         render: {
-          sprite: { texture: `/${fruit.name}.png` },
+          sprite: { texture: imageMap[fruit.name] },
         },
         restitution: 0.2,
       });
@@ -128,7 +154,7 @@ function App() {
             {
               index: index + 1,
               render: {
-                sprite: { texture: `/${newFruit.name}.png` },
+                sprite: { texture: imageMap[fruit.name] },
               },
             }
           );
