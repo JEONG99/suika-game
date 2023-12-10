@@ -16,17 +16,17 @@ import melon from "/base/09_melon.png";
 import watermelon from "/base/10_watermelon.png";
 
 const imageMap = {
-  "/base/00_cherry": cherry,
-  "/base/01_strawberry": strawberry,
-  "/base/02_grape": grape,
-  "/base/03_gyool": gyool,
-  "/base/04_orange": orange,
-  "/base/05_apple": apple,
-  "/base/06_pear": pear,
-  "/base/07_peach": peach,
-  "/base/08_pineapple": pineapple,
-  "/base/09_melon": melon,
-  "/base/10_watermelon": watermelon,
+  "base/00_cherry": cherry,
+  "base/01_strawberry": strawberry,
+  "base/02_grape": grape,
+  "base/03_gyool": gyool,
+  "base/04_orange": orange,
+  "base/05_apple": apple,
+  "base/06_pear": pear,
+  "base/07_peach": peach,
+  "base/08_pineapple": pineapple,
+  "base/09_melon": melon,
+  "base/10_watermelon": watermelon,
 };
 
 function App() {
