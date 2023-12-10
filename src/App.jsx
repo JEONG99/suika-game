@@ -154,7 +154,7 @@ function App() {
             {
               index: index + 1,
               render: {
-                sprite: { texture: imageMap[fruit.name] },
+                sprite: { texture: imageMap[newFruit.name] },
               },
             }
           );
