@@ -1,32 +1,32 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { Bodies, Engine, Render, Runner, World, Body, Events } from "matter-js";
-import { FRUITS_BASE } from "./fruits.js";
+import { FRUITS_MOBILE } from "./fruits.js";
 import Swal from "sweetalert2";
 
-import cherry from "/base/00_cherry.png";
-import strawberry from "/base/01_strawberry.png";
-import grape from "/base/02_grape.png";
-import gyool from "/base/03_gyool.png";
-import orange from "/base/04_orange.png";
-import apple from "/base/05_apple.png";
-import pear from "/base/06_pear.png";
-import peach from "/base/07_peach.png";
-import pineapple from "/base/08_pineapple.png";
-import melon from "/base/09_melon.png";
-import watermelon from "/base/10_watermelon.png";
+import cherry from "/mobile/00_cherry.png";
+import strawberry from "/mobile/01_strawberry.png";
+import grape from "/mobile/02_grape.png";
+import gyool from "/mobile/03_gyool.png";
+import orange from "/mobile/04_orange.png";
+import apple from "/mobile/05_apple.png";
+import pear from "/mobile/06_pear.png";
+import peach from "/mobile/07_peach.png";
+import pineapple from "/mobile/08_pineapple.png";
+import melon from "/mobile/09_melon.png";
+import watermelon from "/mobile/10_watermelon.png";
 
 const imageMap = {
-  "base/00_cherry": cherry,
-  "base/01_strawberry": strawberry,
-  "base/02_grape": grape,
-  "base/03_gyool": gyool,
-  "base/04_orange": orange,
-  "base/05_apple": apple,
-  "base/06_pear": pear,
-  "base/07_peach": peach,
-  "base/08_pineapple": pineapple,
-  "base/09_melon": melon,
-  "base/10_watermelon": watermelon,
+  "mobile/00_cherry": cherry,
+  "mobile/01_strawberry": strawberry,
+  "mobile/02_grape": grape,
+  "mobile/03_gyool": gyool,
+  "mobile/04_orange": orange,
+  "mobile/05_apple": apple,
+  "mobile/06_pear": pear,
+  "mobile/07_peach": peach,
+  "mobile/08_pineapple": pineapple,
+  "mobile/09_melon": melon,
+  "mobile/10_watermelon": watermelon,
 };
 
 const WIDTH = window.innerWidth;
@@ -76,7 +76,7 @@ function Mobile() {
       render: { fillStyle: "#E6B143" },
     });
 
-    const topLine = Bodies.rectangle(WIDTH / 2, 120, WIDTH, 2, {
+    const topLine = Bodies.rectangle(WIDTH / 2, 100, WIDTH, 2, {
       name: "topLine",
       isStatic: true,
       isSensor: true,
@@ -94,7 +94,7 @@ function Mobile() {
 
     const addFruit = () => {
       const index = Math.floor(Math.random() * 5);
-      const fruit = FRUITS_BASE[index];
+      const fruit = FRUITS_MOBILE[index];
 
       const fruitBody = Bodies.circle(WIDTH / 2, 50, fruit.radius, {
         index,
@@ -150,7 +150,7 @@ function Mobile() {
         if (collision.bodyA.index === collision.bodyB.index) {
           const index = collision.bodyA.index;
           World.remove(world, [collision.bodyA, collision.bodyB]);
-          const newFruit = FRUITS_BASE[index + 1];
+          const newFruit = FRUITS_MOBILE[index + 1];
           const newFruitBody = Bodies.circle(
             collision.collision.supports[0].x,
             collision.collision.supports[0].y,
@@ -163,7 +163,7 @@ function Mobile() {
             }
           );
           World.add(world, newFruitBody);
-          if (index === FRUITS_BASE.length - 2) {
+          if (index === FRUITS_MOBILE.length - 2) {
             Swal.fire({
               icon: "success",
               text: "You Win! You got two watermelons!",

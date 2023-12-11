@@ -45,51 +45,51 @@ const FRUITS_BASE = [
   },
 ];
 
-const FRUITS_HLW = [
+const FRUITS_MOBILE = [
   {
-    name: "halloween/00_cherry",
+    name: "mobile/00_cherry",
+    radius: 28 / 2,
+  },
+  {
+    name: "mobile/01_strawberry",
+    radius: 36 / 2,
+  },
+  {
+    name: "mobile/02_grape",
     radius: 46 / 2,
   },
   {
-    name: "halloween/01_strawberry",
+    name: "mobile/03_gyool",
     radius: 55 / 2,
   },
   {
-    name: "halloween/02_grape",
-    radius: 67 / 2,
+    name: "mobile/04_orange",
+    radius: 69 / 2,
   },
   {
-    name: "halloween/03_gyool",
-    radius: 81 / 2,
+    name: "mobile/05_apple",
+    radius: 87 / 2,
   },
   {
-    name: "halloween/04_orange",
-    radius: 97 / 2,
+    name: "mobile/06_pear",
+    radius: 100 / 2,
   },
   {
-    name: "halloween/05_apple",
-    radius: 117 / 2,
+    name: "mobile/07_peach",
+    radius: 121 / 2,
   },
   {
-    name: "halloween/06_pear",
-    radius: 142 / 2,
+    name: "mobile/08_pineapple",
+    radius: 143 / 2,
   },
   {
-    name: "halloween/07_peach",
-    radius: 171 / 2,
+    name: "mobile/09_melon",
+    radius: 170 / 2,
   },
   {
-    name: "halloween/08_pineapple",
-    radius: 206 / 2,
-  },
-  {
-    name: "halloween/09_melon",
-    radius: 249 / 2,
-  },
-  {
-    name: "halloween/10_watermelon",
-    radius: 300 / 2,
+    name: "mobile/10_watermelon",
+    radius: 200 / 2,
   },
 ];
 
-export { FRUITS_BASE, FRUITS_HLW };
+export { FRUITS_BASE, FRUITS_MOBILE };
