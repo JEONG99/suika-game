@@ -35,7 +35,7 @@ function Desktop() {
   useLayoutEffect(() => {
     for (const key of Object.keys(imageMap)) {
       const image = new Image();
-      image.src = key;
+      image.src = imageMap[key];
     }
   }, []);
 

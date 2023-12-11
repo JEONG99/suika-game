@@ -38,7 +38,7 @@ function Mobile() {
   useLayoutEffect(() => {
     for (const key of Object.keys(imageMap)) {
       const image = new Image();
-      image.src = key;
+      image.src = imageMap[key];
     }
   }, []);
 
@@ -91,7 +91,6 @@ function Mobile() {
     let currentFruitBody = null;
     let currentFruit = null;
     let disableAction = false;
-    let waterMelonCount = 0;
 
     const addFruit = () => {
       const index = Math.floor(Math.random() * 5);
@@ -164,20 +163,17 @@ function Mobile() {
           );
           World.add(world, newFruitBody);
           if (index === FRUITS_BASE.length - 2) {
-            if (waterMelonCount === 1) {
-              Swal.fire({
-                icon: "success",
-                text: "You Win! You got two watermelons!",
-                showCancelButton: false,
-                confirmButtonText: "Continue",
-              }).then((res) => {
-                if (res.isConfirmed) {
-                  window.location.reload();
-                }
-              });
-              return;
-            }
-            waterMelonCount++;
+            Swal.fire({
+              icon: "success",
+              text: "You Win! You got two watermelons!",
+              showCancelButton: false,
+              confirmButtonText: "Continue",
+            }).then((res) => {
+              if (res.isConfirmed) {
+                window.location.reload();
+              }
+            });
+            return;
           }
         }
         if (
