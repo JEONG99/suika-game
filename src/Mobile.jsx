@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { Bodies, Engine, Render, Runner, World, Body, Events } from "matter-js";
 import { FRUITS_BASE } from "./fruits.js";
 import Swal from "sweetalert2";
@@ -34,6 +34,13 @@ const HEIGHT = window.innerHeight;
 
 function Mobile() {
   const canvasRef = useRef(null);
+
+  useLayoutEffect(() => {
+    for (const key of Object.keys(imageMap)) {
+      const image = new Image();
+      image.src = key;
+    }
+  }, []);
 
   useEffect(() => {
     const engine = Engine.create();
