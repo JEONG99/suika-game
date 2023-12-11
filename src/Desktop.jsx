@@ -173,6 +173,7 @@ function Desktop() {
                 text: "You Win! You got two watermelons!",
                 showCancelButton: false,
                 confirmButtonText: "Continue",
+                allowOutsideClick: false,
               }).then((res) => {
                 if (res.isConfirmed) {
                   window.location.reload();
@@ -193,6 +194,7 @@ function Desktop() {
             text: "Game Over!",
             showCancelButton: false,
             confirmButtonText: "Continue",
+            allowOutsideClick: false,
           }).then((res) => {
             if (res.isConfirmed) {
               window.location.reload();

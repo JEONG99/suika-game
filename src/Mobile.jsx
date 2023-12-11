@@ -135,6 +135,7 @@ function Mobile() {
     window.addEventListener("touchstart", handleMove);
     window.addEventListener("touchmove", handleMove);
     window.addEventListener("touchend", () => {
+      if (disableAction) return;
       currentFruitBody.isSleeping = false;
       disableAction = true;
 
@@ -168,6 +169,7 @@ function Mobile() {
               text: "You Win! You got two watermelons!",
               showCancelButton: false,
               confirmButtonText: "Continue",
+              allowOutsideClick: false,
             }).then((res) => {
               if (res.isConfirmed) {
                 window.location.reload();
@@ -186,6 +188,7 @@ function Mobile() {
             text: "Game Over!",
             showCancelButton: false,
             confirmButtonText: "Continue",
+            allowOutsideClick: false,
           }).then((res) => {
             if (res.isConfirmed) {
               window.location.reload();
