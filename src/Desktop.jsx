@@ -129,6 +129,7 @@ function Desktop() {
           }, 5);
           break;
         case "KeyS":
+          if (disableAction) return;
           currentFruitBody.isSleeping = false;
           disableAction = true;
 
@@ -136,6 +137,7 @@ function Desktop() {
             addFruit();
             disableAction = false;
           }, 1000);
+          break;
       }
     };
 
