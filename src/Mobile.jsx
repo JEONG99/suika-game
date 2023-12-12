@@ -166,7 +166,7 @@ function Mobile() {
           if (index === FRUITS_MOBILE.length - 2) {
             Swal.fire({
               icon: "success",
-              text: "You Win! You got two watermelons!",
+              text: "수박 만들기 성공!",
               showCancelButton: false,
               confirmButtonText: "Continue",
               allowOutsideClick: false,
@@ -185,7 +185,7 @@ function Mobile() {
         ) {
           Swal.fire({
             icon: "warning",
-            text: "Game Over!",
+            text: "게임 오버!",
             showCancelButton: false,
             confirmButtonText: "Continue",
             allowOutsideClick: false,

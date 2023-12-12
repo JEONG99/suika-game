@@ -172,7 +172,7 @@ function Desktop() {
             if (waterMelonCount === 1) {
               Swal.fire({
                 icon: "success",
-                text: "You Win! You got two watermelons!",
+                text: "수박 두개 만들기 성공!",
                 showCancelButton: false,
                 confirmButtonText: "Continue",
                 allowOutsideClick: false,
@@ -193,7 +193,7 @@ function Desktop() {
         ) {
           Swal.fire({
             icon: "warning",
-            text: "Game Over!",
+            text: "게임 오버!",
             showCancelButton: false,
             confirmButtonText: "Continue",
             allowOutsideClick: false,
